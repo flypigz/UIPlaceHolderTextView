@@ -1,0 +1,286 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D056D7891608D7C9007203A8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D056D7881608D7C9007203A8 /* UIKit.framework */; };
+		D056D78B1608D7C9007203A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D056D78A1608D7C9007203A8 /* Foundation.framework */; };
+		D056D78D1608D7C9007203A8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D056D78C1608D7C9007203A8 /* CoreGraphics.framework */; };
+		D056D7931608D7C9007203A8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D056D7911608D7C9007203A8 /* InfoPlist.strings */; };
+		D056D7951608D7C9007203A8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D056D7941608D7C9007203A8 /* main.m */; };
+		D056D7991608D7C9007203A8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D056D7981608D7C9007203A8 /* AppDelegate.m */; };
+		D056D79C1608D7C9007203A8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D056D79B1608D7C9007203A8 /* ViewController.m */; };
+		D056D79F1608D7C9007203A8 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D056D79D1608D7C9007203A8 /* ViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D056D7841608D7C9007203A8 /* PlaceHolderTextView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlaceHolderTextView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D056D7881608D7C9007203A8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D056D78A1608D7C9007203A8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D056D78C1608D7C9007203A8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D056D7901608D7C9007203A8 /* PlaceHolderTextView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PlaceHolderTextView-Info.plist"; sourceTree = "<group>"; };
+		D056D7921608D7C9007203A8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D056D7941608D7C9007203A8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D056D7961608D7C9007203A8 /* PlaceHolderTextView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PlaceHolderTextView-Prefix.pch"; sourceTree = "<group>"; };
+		D056D7971608D7C9007203A8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D056D7981608D7C9007203A8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D056D79A1608D7C9007203A8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D056D79B1608D7C9007203A8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D056D79E1608D7C9007203A8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D056D7811608D7C9007203A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D056D7891608D7C9007203A8 /* UIKit.framework in Frameworks */,
+				D056D78B1608D7C9007203A8 /* Foundation.framework in Frameworks */,
+				D056D78D1608D7C9007203A8 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D056D7791608D7C9007203A8 = {
+			isa = PBXGroup;
+			children = (
+				D056D78E1608D7C9007203A8 /* PlaceHolderTextView */,
+				D056D7871608D7C9007203A8 /* Frameworks */,
+				D056D7851608D7C9007203A8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D056D7851608D7C9007203A8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D056D7841608D7C9007203A8 /* PlaceHolderTextView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D056D7871608D7C9007203A8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D056D7881608D7C9007203A8 /* UIKit.framework */,
+				D056D78A1608D7C9007203A8 /* Foundation.framework */,
+				D056D78C1608D7C9007203A8 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D056D78E1608D7C9007203A8 /* PlaceHolderTextView */ = {
+			isa = PBXGroup;
+			children = (
+				D056D7971608D7C9007203A8 /* AppDelegate.h */,
+				D056D7981608D7C9007203A8 /* AppDelegate.m */,
+				D056D79A1608D7C9007203A8 /* ViewController.h */,
+				D056D79B1608D7C9007203A8 /* ViewController.m */,
+				D056D79D1608D7C9007203A8 /* ViewController.xib */,
+				D056D78F1608D7C9007203A8 /* Supporting Files */,
+			);
+			path = PlaceHolderTextView;
+			sourceTree = "<group>";
+		};
+		D056D78F1608D7C9007203A8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D056D7901608D7C9007203A8 /* PlaceHolderTextView-Info.plist */,
+				D056D7911608D7C9007203A8 /* InfoPlist.strings */,
+				D056D7941608D7C9007203A8 /* main.m */,
+				D056D7961608D7C9007203A8 /* PlaceHolderTextView-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D056D7831608D7C9007203A8 /* PlaceHolderTextView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D056D7A21608D7C9007203A8 /* Build configuration list for PBXNativeTarget "PlaceHolderTextView" */;
+			buildPhases = (
+				D056D7801608D7C9007203A8 /* Sources */,
+				D056D7811608D7C9007203A8 /* Frameworks */,
+				D056D7821608D7C9007203A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PlaceHolderTextView;
+			productName = PlaceHolderTextView;
+			productReference = D056D7841608D7C9007203A8 /* PlaceHolderTextView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D056D77B1608D7C9007203A8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = apple.inc;
+			};
+			buildConfigurationList = D056D77E1608D7C9007203A8 /* Build configuration list for PBXProject "PlaceHolderTextView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D056D7791608D7C9007203A8;
+			productRefGroup = D056D7851608D7C9007203A8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D056D7831608D7C9007203A8 /* PlaceHolderTextView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D056D7821608D7C9007203A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D056D7931608D7C9007203A8 /* InfoPlist.strings in Resources */,
+				D056D79F1608D7C9007203A8 /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D056D7801608D7C9007203A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D056D7951608D7C9007203A8 /* main.m in Sources */,
+				D056D7991608D7C9007203A8 /* AppDelegate.m in Sources */,
+				D056D79C1608D7C9007203A8 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D056D7911608D7C9007203A8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D056D7921608D7C9007203A8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D056D79D1608D7C9007203A8 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D056D79E1608D7C9007203A8 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D056D7A01608D7C9007203A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D056D7A11608D7C9007203A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D056D7A31608D7C9007203A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PlaceHolderTextView/PlaceHolderTextView-Prefix.pch";
+				INFOPLIST_FILE = "PlaceHolderTextView/PlaceHolderTextView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D056D7A41608D7C9007203A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PlaceHolderTextView/PlaceHolderTextView-Prefix.pch";
+				INFOPLIST_FILE = "PlaceHolderTextView/PlaceHolderTextView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D056D77E1608D7C9007203A8 /* Build configuration list for PBXProject "PlaceHolderTextView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D056D7A01608D7C9007203A8 /* Debug */,
+				D056D7A11608D7C9007203A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D056D7A21608D7C9007203A8 /* Build configuration list for PBXNativeTarget "PlaceHolderTextView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D056D7A31608D7C9007203A8 /* Debug */,
+				D056D7A41608D7C9007203A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D056D77B1608D7C9007203A8 /* Project object */;
+}
