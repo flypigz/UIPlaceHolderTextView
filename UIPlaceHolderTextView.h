@@ -19,7 +19,7 @@
     UILabel *placeHolderLabel;
 }
 
-@property (nonatomic, retain) UILabel *placeHolderLabel;
+@property (nonatomic, readonly) UILabel *placeHolderLabel;
 @property (nonatomic, retain) NSString *placeholder;
 @property (nonatomic, retain) UIColor *placeholderColor;
 
