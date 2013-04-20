@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+#import "UIPlaceHolderTextView.h"
+
+@interface ViewController : UIViewController {
+	IBOutlet UIPlaceHolderTextView *textView;
+}
 
 @end
