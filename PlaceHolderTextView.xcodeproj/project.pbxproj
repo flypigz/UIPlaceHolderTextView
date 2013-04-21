@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01B2D0F41722451D00DC23BA /* UIPlaceHolderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B2D0F31722451D00DC23BA /* UIPlaceHolderTextView.m */; };
 		D056D7891608D7C9007203A8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D056D7881608D7C9007203A8 /* UIKit.framework */; };
 		D056D78B1608D7C9007203A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D056D78A1608D7C9007203A8 /* Foundation.framework */; };
 		D056D78D1608D7C9007203A8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D056D78C1608D7C9007203A8 /* CoreGraphics.framework */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01B2D0F21722451D00DC23BA /* UIPlaceHolderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPlaceHolderTextView.h; sourceTree = "<group>"; };
+		01B2D0F31722451D00DC23BA /* UIPlaceHolderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPlaceHolderTextView.m; sourceTree = "<group>"; };
 		D056D7841608D7C9007203A8 /* PlaceHolderTextView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlaceHolderTextView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D056D7881608D7C9007203A8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D056D78A1608D7C9007203A8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -47,10 +50,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01B2D0F11722450B00DC23BA /* UITextView+Placeholder */ = {
+			isa = PBXGroup;
+			children = (
+				01B2D0F21722451D00DC23BA /* UIPlaceHolderTextView.h */,
+				01B2D0F31722451D00DC23BA /* UIPlaceHolderTextView.m */,
+			);
+			name = "UITextView+Placeholder";
+			sourceTree = "<group>";
+		};
 		D056D7791608D7C9007203A8 = {
 			isa = PBXGroup;
 			children = (
-				D056D78E1608D7C9007203A8 /* PlaceHolderTextView */,
+				01B2D0F11722450B00DC23BA /* UITextView+Placeholder */,
+				D056D78E1608D7C9007203A8 /* Sample app */,
 				D056D7871608D7C9007203A8 /* Frameworks */,
 				D056D7851608D7C9007203A8 /* Products */,
 			);
@@ -74,7 +87,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D056D78E1608D7C9007203A8 /* PlaceHolderTextView */ = {
+		D056D78E1608D7C9007203A8 /* Sample app */ = {
 			isa = PBXGroup;
 			children = (
 				D056D7971608D7C9007203A8 /* AppDelegate.h */,
@@ -84,6 +97,7 @@
 				D056D79D1608D7C9007203A8 /* ViewController.xib */,
 				D056D78F1608D7C9007203A8 /* Supporting Files */,
 			);
+			name = "Sample app";
 			path = PlaceHolderTextView;
 			sourceTree = "<group>";
 		};
@@ -164,6 +178,7 @@
 				D056D7951608D7C9007203A8 /* main.m in Sources */,
 				D056D7991608D7C9007203A8 /* AppDelegate.m in Sources */,
 				D056D79C1608D7C9007203A8 /* ViewController.m in Sources */,
+				01B2D0F41722451D00DC23BA /* UIPlaceHolderTextView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +294,7 @@
 				D056D7A41608D7C9007203A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
