@@ -15,26 +15,6 @@
 @synthesize placeholder = _placeholder;
 @synthesize placeholderTextColor = _placeholderTextColor;
 
-- (void)setText:(NSString *)string
-{
-	[super setText:string];
-	[self setNeedsDisplay];
-}
-
-
-- (void)insertText:(NSString *)string
-{
-	[super insertText:string];
-	[self setNeedsDisplay];
-}
-
-
-- (void)setAttributedText:(NSAttributedString *)attributedText
-{
-	[super setAttributedText:attributedText];
-	[self setNeedsDisplay];
-}
-
 
 - (void)setPlaceholder:(NSString *)string
 {
@@ -46,28 +26,6 @@
 	_placeholder = string;
 	[self setNeedsDisplay];
 }
-
-
-- (void)setContentInset:(UIEdgeInsets)contentInset
-{
-	[super setContentInset:contentInset];
-	[self setNeedsDisplay];
-}
-
-
-- (void)setFont:(UIFont *)font
-{
-	[super setFont:font];
-	[self setNeedsDisplay];
-}
-
-
-- (void)setTextAlignment:(NSTextAlignment)textAlignment
-{
-	[super setTextAlignment:textAlignment];
-	[self setNeedsDisplay];
-}
-
 
 #pragma mark - NSObject
 
