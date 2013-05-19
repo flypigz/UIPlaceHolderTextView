@@ -6,24 +6,13 @@
 //  Copyright (c) 2012年 apple.inc. All rights reserved.
 //
 
+// Note: code from SSToolKit
+
 #import <UIKit/UIKit.h>
 
+@interface UIPlaceHolderTextView : UITextView
 
-
-// http://stackoverflow.com/questions/1328638/placeholder-in-uitextview
-
-@interface UIPlaceHolderTextView : UITextView{
-    NSString *placeholder;
-    UIColor *placeholderColor;
-@private
-    UILabel *placeHolderLabel;
-}
-
-@property (nonatomic, readonly) UILabel *placeHolderLabel;
-@property (nonatomic, retain) NSString *placeholder;
-@property (nonatomic, retain) UIColor *placeholderColor;
-
--(void)textChanged:(NSNotification*)notification;
-
+@property (nonatomic, strong) NSString *placeholder;
+@property (nonatomic, strong) UIColor  *placeholderTextColor;
 
 @end

@@ -10,93 +10,132 @@
 
 @implementation UIPlaceHolderTextView
 
-@synthesize placeHolderLabel;
-@synthesize placeholder;
-@synthesize placeholderColor;
+#pragma mark - Accessors
+
+@synthesize placeholder = _placeholder;
+@synthesize placeholderTextColor = _placeholderTextColor;
+
+- (void)setText:(NSString *)string
+{
+	[super setText:string];
+	[self setNeedsDisplay];
+}
+
+
+- (void)insertText:(NSString *)string
+{
+	[super insertText:string];
+	[self setNeedsDisplay];
+}
+
+
+- (void)setAttributedText:(NSAttributedString *)attributedText
+{
+	[super setAttributedText:attributedText];
+	[self setNeedsDisplay];
+}
+
+
+- (void)setPlaceholder:(NSString *)string
+{
+	if ([string isEqual:_placeholder])
+    {
+		return;
+	}
+	
+	_placeholder = string;
+	[self setNeedsDisplay];
+}
+
+
+- (void)setContentInset:(UIEdgeInsets)contentInset
+{
+	[super setContentInset:contentInset];
+	[self setNeedsDisplay];
+}
+
+
+- (void)setFont:(UIFont *)font
+{
+	[super setFont:font];
+	[self setNeedsDisplay];
+}
+
+
+- (void)setTextAlignment:(NSTextAlignment)textAlignment
+{
+	[super setTextAlignment:textAlignment];
+	[self setNeedsDisplay];
+}
+
+
+#pragma mark - NSObject
 
 - (void)dealloc
 {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-#if __has_feature(objc_arc)
-#else
-    [placeHolderLabel release]; placeHolderLabel = nil;
-    [placeholderColor release]; placeholderColor = nil;
-    [placeholder release]; placeholder = nil;
-    [super dealloc];
-#endif
-    
+	[[NSNotificationCenter defaultCenter] removeObserver:self name:UITextViewTextDidChangeNotification object:self];
 }
 
-- (void)awakeFromNib
+
+#pragma mark - UIView
+
+- (id)initWithCoder:(NSCoder *)aDecoder
 {
-    [super awakeFromNib];
-    [self setPlaceholder:@""];
-    [self setPlaceholderColor:[UIColor lightGrayColor]];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textChanged:) name:UITextViewTextDidChangeNotification object:nil];
+	if ((self = [super initWithCoder:aDecoder]))
+    {
+		[self _initialize];
+	}
+	return self;
 }
+
 
 - (id)initWithFrame:(CGRect)frame
 {
-    if( (self = [super initWithFrame:frame]) )
+	if ((self = [super initWithFrame:frame]))
     {
-        [self setPlaceholder:@""];
-        [self setPlaceholderColor:[UIColor lightGrayColor]];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textChanged:) name:UITextViewTextDidChangeNotification object:nil];
-    }
-    return self;
+		[self _initialize];
+	}
+	return self;
 }
 
-- (void)textChanged:(NSNotification *)notification
-{
-    if([[self placeholder] length] == 0)
-    {
-        return;
-    }
-    
-    if([[self text] length] == 0)
-    {
-        [[self viewWithTag:999] setAlpha:1];
-    }
-    else
-    {
-        [[self viewWithTag:999] setAlpha:0];
-    }
-}
-
-- (void)setText:(NSString *)text {
-    [super setText:text];
-    [self textChanged:nil];
-}
 
 - (void)drawRect:(CGRect)rect
 {
-    if( [[self placeholder] length] > 0 )
+	[super drawRect:rect];
+    
+	if (self.text.length == 0 && self.placeholder)
     {
-        if ( placeHolderLabel == nil )
-        {
-            placeHolderLabel = [[UILabel alloc] initWithFrame:CGRectMake(8,8,self.bounds.size.width - 16,0)];
-            placeHolderLabel.lineBreakMode = UILineBreakModeWordWrap;
-            placeHolderLabel.numberOfLines = 0;
-            placeHolderLabel.font = self.font;
-            placeHolderLabel.backgroundColor = [UIColor clearColor];
-            placeHolderLabel.textColor = self.placeholderColor;
-            placeHolderLabel.alpha = 0;
-            placeHolderLabel.tag = 999;
-            [self addSubview:placeHolderLabel];
-        }
+		// Inset the rect
+		rect = UIEdgeInsetsInsetRect(rect, self.contentInset);
         
-        placeHolderLabel.text = self.placeholder;
-        [placeHolderLabel sizeToFit];
-        [self sendSubviewToBack:placeHolderLabel];
-    }
-    
-    if( [[self text] length] == 0 && [[self placeholder] length] > 0 )
-    {
-        [[self viewWithTag:999] setAlpha:1];
-    }
-    
-    [super drawRect:rect];
+		// TODO: This is hacky. Not sure why 8 is the magic number
+		if (self.contentInset.left == 0.0f)
+        {
+			rect.origin.x += 8.0f;
+		}
+		rect.origin.y += 8.0f;
+        
+		// Draw the text
+		[_placeholderTextColor set];
+#if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_6_0
+		[_placeholder drawInRect:rect withFont:self.font lineBreakMode:NSLineBreakByTruncatingTail alignment:self.textAlignment];
+#else
+		[_placeholder drawInRect:rect withFont:self.font lineBreakMode:UILineBreakModeTailTruncation alignment:self.textAlignment];
+#endif
+	}
 }
 
+#pragma mark - Private
+
+- (void)_initialize
+{
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_textChanged:) name:UITextViewTextDidChangeNotification object:self];
+	self.placeholderTextColor = [UIColor colorWithWhite:0.702f alpha:1.0f];
+}
+
+- (void)_textChanged:(NSNotification *)notification
+{
+	[self setNeedsDisplay];
+}
 
 @end

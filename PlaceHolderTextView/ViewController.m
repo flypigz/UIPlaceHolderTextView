@@ -20,7 +20,7 @@
 	
 	//Set placeholder
 	[textView setPlaceholder:@"Input string"];
-	[textView setPlaceholderColor:[UIColor redColor]];
+	[textView setPlaceholderTextColor:[UIColor redColor]];
 }
 
 - (void)viewDidUnload
